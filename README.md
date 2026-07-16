@@ -1,4 +1,4 @@
-# 事实核验 - iOS Shortcuts
+# 事实核验 - iOS Shortcuts/Chrome Gemini skill
 
 一个用于快速核验信息真实性的iOS快捷指令，支持X/Twitter内容提取和Gemini AI分析。
 
@@ -26,9 +26,7 @@
 3. 系统会自动打开"快捷指令"App并提示添加
 4. 点击"添加快捷指令"
 
-### 方法二：手动创建
-
-# 电脑端Chrome Gemini 扩展：事实校验技能
+### 方法二：手动创建电脑端Chrome Gemini 扩展：事实校验技能
 
 在Chrome浏览器的Gemini对话框中添加自定义技能，实现一键事实核验。
 
