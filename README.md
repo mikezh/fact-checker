@@ -1,4 +1,6 @@
-# 事实核验 - iOS Shortcuts/Chrome Gemini skill
+# 事实核验 - iOS Shortcuts/Chrome Gemini Skill
+
+[English Version](./README_EN.md) | 中文版
 
 一个用于快速核验信息真实性的iOS快捷指令，支持X/Twitter内容提取和Gemini AI分析。
 
