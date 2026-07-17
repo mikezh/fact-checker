@@ -1,5 +1,7 @@
 # Fact Checker - iOS Shortcuts / Chrome Gemini Skill
 
+English Version | [中文版](./README.md)
+
 A tool for quickly verifying the authenticity of information, supporting X/Twitter content extraction and Gemini AI analysis.
 
 ## Features
@@ -180,8 +182,8 @@ Main Sources:
 
 ## System Requirements
 
-- iOS 16.0 or later
-- macOS/Windows Chrome 150 or later with Google Gemini App installed
+- iOS 16.0 or later and later with Google Gemini App installed
+- macOS/Windows Chrome 150 
 
 ## License
 
