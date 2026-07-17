@@ -121,8 +121,8 @@
 
 ## 系统要求
 
-- iOS 16.0 或更高版本
-- Mac OS/Windows Chrome 150 或更高版本已安装 Google Gemini App
+- iOS 16.0 或更高版本，已安装 Google Gemini App
+- Mac OS/Windows Chrome 150 或更高版本
 
 ## 许可证
 
