@@ -158,7 +158,7 @@ Main Sources:
 
 **Input**:
 ```
-An iOS Shortcut designed for rapidly verifying the authenticity of information; it supports content extraction from X, YouTube, various websites, and apps, as well as authenticity analysis using Gemini AI.
+An iOS Shortcut for rapidly verifying the authenticity of information; it supports authenticity analysis for content from X, YouTube, various websites, and a wide range of apps.
 ```
 
 **Output**:
