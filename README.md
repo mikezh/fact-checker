@@ -1,138 +1,205 @@
-# 事实核验 - iOS Shortcuts/Chrome Gemini Skill
+# Fact Checker - iOS Shortcuts / Chrome Gemini Skill
 
-[English Version](./README_EN.md) | 中文版
+English Version | [中文版](./README.md)
 
-一个用于快速核验信息真实性的iOS快捷指令，支持X/Twitter内容提取和Gemini AI分析。
+A tool for quickly verifying the authenticity of information, supporting X/Twitter content extraction and Gemini AI analysis.
 
-## 功能特点
+## Features
 
-- 📋 **一键分享**：从任意App分享内容即可触发事实核验
-- 🤖 **Gemini AI分析**：使用Google Gemini进行事实核查
-- 🔗 **无需API密钥**：直接使用Gemini App，无需注册API
-- 🐦 **X/Twitter智能处理**：自动识别X/Twitter链接，通过API获取完整推文内容
+- 📋 **One-Tap Sharing**: Share content from any app to trigger fact-checking
+- 🤖 **Gemini AI Analysis**: Use Google Gemini for fact verification
+- 🔗 **No API Key Required**: Use Gemini App directly, no API registration needed
+- 🐦 **Smart X/Twitter Handling**: Automatically detect X/Twitter links and fetch full tweet content via API
 
-## 工作流程
-
-```
-分享内容 → 判断URL类型
-  ├─ X/Twitter URL → FxTwitter API获取内容 → Gemini分析
-  └─ 其他内容 → 直接传给Gemini分析
-```
-
-## 安装方法
-
-### 方法一：iOS端直接导入（推荐）
-
-1. 首先安装iPhone/iPad上的Gemini应用
-2. 设备上下载 `事实核验.shortcut` 文件：https://www.icloud.com/shortcuts/820468da67314304800b6f137d64a74e  打开文件
-3. 系统会自动打开"快捷指令"App并提示添加
-4. 点击"添加快捷指令"
-5. （可选）在iOS的分享菜单可以编辑分享列表顺序和收藏，提高“事实核验”在分享中的排序
-
-### 方法二：手动创建电脑端Chrome Gemini 扩展：事实校验技能
-
-在Chrome浏览器的Gemini对话框中添加自定义技能，实现一键事实核验。
-
-#### 步骤1: 打开Gemini扩展设置
-
-1. 在Chrome浏览器中点击右上角的 **Gemini图标**
-2. 点击对话框中的 **设置图标** ⚙️
-3. 找到 **"技能"** 或 **"Skills"** 选项
-
-#### 步骤2: 添加新技能
-
-1. 点击 **"添加技能"** 或 **"+"**
-2. 填写以下信息：
-
-**名称**：
-```
-事实校验
-```
-
-**说明**：
-```
-先分段总结当前内容的概要，然后搜索、分析、验证内容的准确性。
-
-格式采用表格形式：
-- 第一列"总结"：分段内容的核心观点（一句话）
-- 第二列"事实"：搜索最新相关新闻、权威来源，核实后给出结论
-- 第三列"验证"：✅（正确）、❌（错误）、⚠️（部分正确/有争议）、❓（无法验证）
-
-对于论点，标注是否为业界主流观点，并注明争议点。
-对于无法验证的内容，说明原因（如：需要专业实验、数据不足等）。
-
-最后给出：
-1. 整体准确性评估
-2. 核心正确结论总结
-3. 主要信息来源
-
-使用简体中文，尽量简短。
-```
-
-3. 点击 **"保存"**
-
-
-## 使用方法
-
-1. iPhone/iPad在任意App中选中要核验的内容
-2. 点击"分享" → 选择"事实核验"
-3. 自动打开Gemini App并获取核验结果
-
-## 技术细节
-
-### X/Twitter内容提取
-
-使用 [FxTwitter API](https://github.com/FxTwitter/FxTwitter)：
-- API端点：`https://api.fxtwitter.com/[tweet_url]`
-- 无需认证，完全免费
-- 返回JSON格式的推文内容
-
-### Prompt模板
-
-快捷指令会自动附加以下prompt（可根据需要修改）：
+## Workflow
 
 ```
-先分段总结当前内容的概要，然后搜索、分析、验证内容的准确性。
-
-格式采用表格形式：
-- 第一列"总结"：分段内容的核心观点（一句话）
-- 第二列"事实"：搜索最新相关新闻、权威来源，核实后给出结论
-- 第三列"验证"：✅（正确）、❌（错误）、⚠️（部分正确/有争议）、❓（无法验证）
-
-对于论点，标注是否为业界主流观点，并注明争议点。
-对于无法验证的内容，说明原因（如：需要专业实验、数据不足等）。
-
-最后给出：
-1. 整体准确性评估
-2. 核心正确结论总结
-3. 主要信息来源
-
-使用简体中文，尽量简短。
+Share Content → Detect URL Type
+  ├─ X/Twitter URL → FxTwitter API fetch content → Gemini analysis
+  └─ Other content → Direct to Gemini analysis
 ```
 
-## 自定义
+## Installation
 
-你可以根据需要修改快捷指令：
+### Method 1: iOS Direct Import (Recommended)
 
-1. **修改Prompt**：在快捷指令编辑界面修改"文本"操作中的prompt
-2. **添加更多平台**：参考X/Twitter的处理方式，添加其他平台的特殊处理
-3. **更换AI工具**：可以将Gemini替换为其他AI App
-4. **更换显示语言**：可以将最后一行提示词中的语言改为你习惯的语言
+1. First install the Gemini app on your iPhone/iPad
+2. Download the `Fact Checker.shortcut` file on your device: https://www.icloud.com/shortcuts/820468da67314304800b6f137d64a74e
+3. Open the file - it will automatically launch the Shortcuts app
+4. Tap "Add Shortcut"
+5. (Optional) In iOS Share Sheet, you can edit the share list order and favorites to improve "Fact Checker" ranking
 
-## 系统要求
+### Method 2: Chrome Gemini Extension Skill Setup
 
-- iOS 16.0 或更高版本，已安装 Google Gemini App
-- Mac OS/Windows Chrome 150 或更高版本
+Add a custom skill in Chrome browser's Gemini dialog for one-tap fact-checking.
 
-## 许可证
+#### Step 1: Open Gemini Extension Settings
 
-MIT License - 自由使用和修改
+1. Click the **Gemini icon** in the top-right corner of Chrome
+2. Click the **Settings icon** ⚙️ in the dialog
+3. Find **"Skills"** option
 
-## 贡献
+#### Step 2: Add New Skill
 
-欢迎提交Issue和Pull Request！
+1. Click **"Add Skill"** or **"+"**
+2. Fill in the following information:
 
-## 致谢
+**Name**:
+```
+Fact Check
+```
 
-- [FxTwitter](https://github.com/FxTwitter/FxTwitter) - Twitter内容提取API
-- Google Gemini - AI分析引擎
+**Description**:
+```
+First summarize the current content in segments, then search, analyze, and verify the accuracy of the content.
+
+Format as a table:
+- Column 1 "Summary": Core viewpoint of each segment (one sentence)
+- Column 2 "Fact": Search latest news and authoritative sources, verify and provide conclusion
+- Column 3 "Verification": ✅ (Correct), ❌ (Wrong), ⚠️ (Partially correct/Controversial), ❓ (Cannot verify)
+
+For arguments, indicate if it's a mainstream view and note any controversies.
+For unverifiable content, explain why (e.g., requires professional experiments, insufficient data).
+
+Finally provide:
+1. Overall accuracy assessment
+2. Summary of correct conclusions
+3. Main information sources
+
+Keep it concise.
+```
+
+3. Click **"Save"**
+
+## Usage
+
+### iOS/iPadOS
+
+1. Select content to verify in any app
+2. Tap "Share" → Select "Fact Checker"
+3. Gemini App opens automatically and displays verification results
+
+### Chrome Desktop
+
+1. Open the webpage to verify
+2. Click Gemini icon in top-right corner
+3. Type `/fact check` or select the "Fact Check" skill
+4. Gemini will read the current page and perform verification
+
+## Technical Details
+
+### X/Twitter Content Extraction
+
+Uses [FxTwitter API](https://github.com/FxTwitter/FxTwitter):
+- API Endpoint: `https://api.fxtwitter.com/[tweet_url]`
+- No authentication required, completely free
+- Returns tweet content in JSON format
+
+### Prompt Template
+
+The shortcut automatically appends the following prompt (can be modified):
+
+```
+First summarize the current content in segments, then search, analyze, and verify the accuracy of the content.
+
+Format as a table:
+- Column 1 "Summary": Core viewpoint of each segment (one sentence)
+- Column 2 "Fact": Search latest news and authoritative sources, verify and provide conclusion
+- Column 3 "Verification": ✅ (Correct), ❌ (Wrong), ⚠️ (Partially correct/Controversial), ❓ (Cannot verify)
+
+For arguments, indicate if it's a mainstream view and note any controversies.
+For unverifiable content, explain why (e.g., requires professional experiments, insufficient data).
+
+Finally provide:
+1. Overall accuracy assessment
+2. Summary of correct conclusions
+3. Main information sources
+
+Keep it concise.
+```
+
+## Customization
+
+You can modify the shortcut as needed:
+
+1. **Modify Prompt**: Edit the "Text" action in the shortcut editor
+2. **Add More Platforms**: Follow the X/Twitter pattern to add special handling for other platforms
+3. **Change AI Tool**: Replace Gemini with other AI apps
+4. **Change Output Language**: Modify the last line of the prompt to your preferred language
+
+## Output Example
+
+### Example 1: Verify Tech News
+
+**Input**:
+```
+Apple announced it will launch a foldable iPhone in 2025, with an expected price over $2000.
+```
+
+**Output**:
+```
+| Summary | Fact | Verification |
+|---------|------|--------------|
+| Apple will launch foldable iPhone | As of now, Apple has not officially announced a foldable iPhone release date | ❌ |
+| Price over $2000 | Foldable phones indeed range from $1500-2500 | ⚠️ |
+
+Overall Accuracy: Partially correct
+Correct Conclusions:
+- Foldable phones are indeed expensive (supported by market data)
+- But Apple has not officially announced foldable iPhone plans
+
+Main Sources:
+- Apple official website
+- Bloomberg tech reports
+- Counterpoint Research market data
+```
+
+### Example 2: Verify Health Information
+
+**Input**:
+```
+Drinking hot water can cure all diseases, this is traditional Chinese medicine wisdom.
+```
+
+**Output**:
+```
+| Summary | Fact | Verification |
+|---------|------|--------------|
+| Hot water cures all diseases | Hot water relieves some symptoms but doesn't cure all diseases | ❌ |
+| Traditional Chinese medicine wisdom | TCM emphasizes warm water for health but doesn't claim "cure all" | ⚠️ |
+
+Overall Accuracy: Inaccurate
+Correct Conclusions:
+- Warm water benefits digestion and circulation (medically supported)
+- "Cure all diseases" is an exaggeration without scientific basis
+- TCM emphasizes wellness, not treating all diseases
+
+Main Sources:
+- Huangdi Neijing (Classic Chinese Medicine text)
+- Modern medical research (PubMed)
+- WHO health guidelines
+```
+
+## System Requirements
+
+- iOS 16.0 or later and later with Google Gemini App installed
+- macOS/Windows Chrome 150 
+
+## License
+
+MIT License - Free to use and modify
+
+## Contributing
+
+Issues and Pull Requests are welcome!
+
+## Acknowledgments
+
+- [FxTwitter](https://github.com/FxTwitter/FxTwitter) - Twitter content extraction API
+- Google Gemini - AI analysis engine
+
+## Related Documentation
+
+- [README.md](./README.md) - 中文文档 (Chinese version)
+- [chrome-gemini-skill.md](./chrome-gemini-skill.md) - Chrome Gemini 详细配置 (Detailed Chrome Gemini setup)
+- [shortcuts-x-twitter-only.md](./shortcuts-x-twitter-only.md) - iOS Shortcuts 配置教程 (iOS Shortcuts tutorial)
