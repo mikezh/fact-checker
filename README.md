@@ -2,7 +2,7 @@
 
 English Version | [中文版](./README_CN.md)
 
-A tool for quickly verifying the authenticity of information, supporting X/Twitter content extraction and Gemini AI analysis.
+An iOS Shortcut for rapidly verifying the authenticity of information, alongside a desktop-based Chrome browser tool; both support authenticity analysis of content from X, YouTube, various websites, and diverse apps.
 
 ## Features
 

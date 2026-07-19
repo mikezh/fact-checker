@@ -2,7 +2,7 @@
 
 [English Version](./README.md) | 中文版
 
-一个用于快速核验信息真实性的iOS快捷指令，支持X、Youtube、各类网站、各种APP的内容进行真实性分析。
+一个用于快速核验信息真实性的iOS快捷指令和一个电脑端基于Chrome浏览器的技能，支持X、Youtube、各类网站、各种APP的内容进行真实性分析。
 
 ## 功能特点
 
