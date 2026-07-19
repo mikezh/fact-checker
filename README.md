@@ -158,7 +158,7 @@ Main Sources:
 
 **Input**:
 ```
-Drinking hot water can cure all diseases, this is traditional Chinese medicine wisdom.
+An iOS Shortcut designed for rapidly verifying the authenticity of information; it supports content extraction from X, YouTube, various websites, and apps, as well as authenticity analysis using Gemini AI.
 ```
 
 **Output**:
