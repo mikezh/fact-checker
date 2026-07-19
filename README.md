@@ -36,12 +36,10 @@ Add a custom skill in Chrome browser's Gemini dialog for one-tap fact-checking.
 #### Step 1: Open Gemini Extension Settings
 
 1. Click the **Gemini icon** in the top-right corner of Chrome
-2. Click the **Settings icon** ⚙️ in the dialog
-3. Find **"Skills"** option
 
 #### Step 2: Add New Skill
 
-1. Click **"Add Skill"** or **"+"**
+1. Type "/" in the dialog box and click **Add Skill** in the menu.
 2. Fill in the following information:
 
 **Name**:
