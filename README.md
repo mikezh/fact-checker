@@ -81,7 +81,7 @@ Keep it concise.
 
 1. Open the webpage to verify
 2. Click Gemini icon in top-right corner
-3. Type `/fact check` or select the "Fact Check" skill
+3. Type `/fact check` or select the "Fact Check" skill then Press Enter
 4. Gemini will read the current page and perform verification
 
 ## Technical Details
