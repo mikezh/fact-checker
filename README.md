@@ -1,6 +1,6 @@
 # Fact Checker - iOS Shortcuts / Chrome Gemini Skill
 
-English Version | [中文版](./README.md)
+English Version | [中文版](./README_CN.md)
 
 A tool for quickly verifying the authenticity of information, supporting X/Twitter content extraction and Gemini AI analysis.
 
@@ -197,9 +197,3 @@ Issues and Pull Requests are welcome!
 
 - [FxTwitter](https://github.com/FxTwitter/FxTwitter) - Twitter content extraction API
 - Google Gemini - AI analysis engine
-
-## Related Documentation
-
-- [README.md](./README.md) - 中文文档 (Chinese version)
-- [chrome-gemini-skill.md](./chrome-gemini-skill.md) - Chrome Gemini 详细配置 (Detailed Chrome Gemini setup)
-- [shortcuts-x-twitter-only.md](./shortcuts-x-twitter-only.md) - iOS Shortcuts 配置教程 (iOS Shortcuts tutorial)
